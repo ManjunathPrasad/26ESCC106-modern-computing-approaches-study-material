@@ -14,7 +14,7 @@
 *.snm
 *.vrb
 
-*.pdf
+
 
 build/
 out/
