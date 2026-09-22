@@ -76,11 +76,11 @@ produces the final output.
     \monitor{\x}{1.75}
     \node[lbl,anchor=north] at (\x,1.08) {COMPUTER\\(SLAVE NODE \n)};
   }
-  % root to every slave
+
   \draw[->] (1.65,3.05) to[out=0,in=90]   (2.75,2.14);
   \draw[->] (1.65,3.10) to[out=15,in=115] (4.75,2.14);
   \draw[->] (1.65,3.15) to[out=20,in=120] (6.75,2.14);
-  % slave to slave
+
   \draw[->] (3.05,2.14) to[bend left=55] (4.95,2.14);
   \draw[->] (3.25,2.14) to[bend left=40] (6.95,2.14);
   \draw[->] (5.05,2.14) to[bend left=55] (7.10,2.14);
