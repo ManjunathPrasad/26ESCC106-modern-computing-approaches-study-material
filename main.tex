@@ -1,0 +1,76 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Mangalore Institute of Technology and Engineering (MITE)                                     %%%%%
+%%%%%  Cluster and Grid Computing -- Module 1 Study Material                                        %%%%%
+%%%%%  Course Name  : Modern Computing and Python Programming (26ESCC106)                           %%%%%
+%%%%%  Compiled by  : Mr. Manjunath Prasad H. R., Department of AI&ML                               %%%%%
+%%%%%  Reviewed and Approved by : Dr. Prashanth C. M. Principal, MITE,                              %%%%%
+%%%%%                             Dr. Terrence K. Johnson, Professor & Associate Dean Academics     %%%%%
+%%%%%                             Dr. Ravinarayana B., Professor and Head, Department of CS&E       %%%%%
+%%%%%                                                                                               %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,margin=2.54cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}                 
+\usepackage[scaled=0.92]{helvet}      
+\usepackage{microtype}
+\usepackage{setspace}
+\setstretch{1.2}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\usepackage{array,tabularx,booktabs}
+\renewcommand{\arraystretch}{1.25}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=4pt,leftmargin=*}
+\usepackage[font=small,labelfont=bf,textfont=it,skip=6pt]{caption}
+
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 26ESCC106 \,|\, Module 1}
+\fancyhead[R]{\small Cluster and Grid Computing}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\usepackage[most]{tcolorbox}
+\newtcolorbox{notebox}{colback=white,colframe=black,boxrule=0.6pt,
+  arc=0pt,left=8pt,right=8pt,top=6pt,bottom=6pt,fontupper=\itshape}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+\tikzset{
+  every picture/.style={line width=0.8pt,>={Stealth[length=2.2mm]}},
+  lbl/.style={font=\sffamily\footnotesize,align=center},
+}
+
+\NewDocumentCommand{\B}{O{} O{} m m m}{%
+  \draw[#1] (#3) rectangle (#4);
+  \path (#3) -- node[lbl,#2]{#5} (#4);}
+
+\newcommand{\monitor}[2]{%
+  \draw[line width=2.2pt,fill=white] (#1-0.55,#2-0.35) rectangle (#1+0.55,#2+0.37);
+  \fill (#1-0.10,#2-0.35) -- (#1+0.10,#2-0.35) -- (#1+0.13,#2-0.55) -- (#1-0.13,#2-0.55) -- cycle;
+  \fill (#1-0.35,#2-0.62) rectangle (#1+0.35,#2-0.54);}
+
+\usepackage[hidelinks]{hyperref}
+
+\urlstyle{same}
+\newcommand{\rc}[1]{[\ref{#1}]}
+\newcommand{\rcc}[2]{[\ref{#1},\,\ref{#2}]}
+
+\begin{document}
+
+\input{Cluster_and_Grid_Computing.tex}
+
+\end{document}
