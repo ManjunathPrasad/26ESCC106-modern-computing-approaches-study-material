@@ -1,16 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  preamble.tex -- shared settings for every Module 1 topic file                                %%%%%
+%%%%%  Loaded by main.tex and, through subfiles, by each topic in topics/                           %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%  Mangalore Institute of Technology and Engineering (MITE)                                     %%%%%
-%%%%%  Cluster and Grid Computing -- Module 1 Study Material                                        %%%%%
-%%%%%  Course Name  : Modern Computing and Python Programming (26ESCC106)                           %%%%%
-%%%%%  Compiled by  : Mr. Manjunath Prasad H. R., Department of AI&ML                               %%%%%
-%%%%%  Reviewed and Approved by : Dr. Prashanth C. M. Principal, MITE,                              %%%%%
-%%%%%                             Dr. Terrence K. Johnson, Professor & Associate Dean Academics     %%%%%
-%%%%%                             Dr. Ravinarayana B., Professor and Head, Department of CS&E       %%%%%
-%%%%%                                                                                               %%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[11pt,a4paper]{article}
 
 \usepackage[a4paper,margin=2.54cm]{geometry}
 \usepackage[T1]{fontenc}
@@ -39,9 +30,11 @@
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\small 26ESCC106 \,|\, Module 1}
-\fancyhead[R]{\small Cluster and Grid Computing}
+\fancyhead[R]{\small\rightmark}
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\sectionmark}[1]{}      
+\renewcommand{\subsectionmark}[1]{}  
 
 \usepackage[most]{tcolorbox}
 \newtcolorbox{notebox}{colback=white,colframe=black,boxrule=0.6pt,
@@ -53,24 +46,32 @@
   every picture/.style={line width=0.8pt,>={Stealth[length=2.2mm]}},
   lbl/.style={font=\sffamily\footnotesize,align=center},
 }
-
 \NewDocumentCommand{\B}{O{} O{} m m m}{%
   \draw[#1] (#3) rectangle (#4);
   \path (#3) -- node[lbl,#2]{#5} (#4);}
-
 \newcommand{\monitor}[2]{%
   \draw[line width=2.2pt,fill=white] (#1-0.55,#2-0.35) rectangle (#1+0.55,#2+0.37);
   \fill (#1-0.10,#2-0.35) -- (#1+0.10,#2-0.35) -- (#1+0.13,#2-0.55) -- (#1-0.13,#2-0.55) -- cycle;
   \fill (#1-0.35,#2-0.62) rectangle (#1+0.35,#2-0.54);}
 
 \usepackage[hidelinks]{hyperref}
-
 \urlstyle{same}
 \newcommand{\rc}[1]{[\ref{#1}]}
 \newcommand{\rcc}[2]{[\ref{#1},\,\ref{#2}]}
 
-\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{Cluster_and_Grid_Computing.tex}
-
-\end{document}
+%%%%%  Topic heading %%%%%
+%  \topic{<name>} starts a new topic: it prints the heading, puts the name in
+%  the running header, restarts section numbering at 1 and numbers the figures
+%  of that topic <topic no.>.<figure no.>.
+\newcounter{topicno}
+\newcommand{\topicname}{}
+\renewcommand{\thefigure}{\arabic{topicno}.\arabic{figure}}
+\newcommand{\topic}[1]{%
+  \ifnum\value{topicno}>0 \clearpage\fi
+  \stepcounter{topicno}%
+  \renewcommand{\topicname}{#1}%
+  \markright{#1}%
+  \setcounter{section}{0}\setcounter{figure}{0}%
+  \begin{center}{\Large\bfseries Topic in Module 1 --- #1}\end{center}}

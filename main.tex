@@ -1,0 +1,33 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%  Mangalore Institute of Technology and Engineering (MITE)                                     %%%%%
+%%%%%  Module 1 -- Modern Computing Approaches : Study Material                                     %%%%%
+%%%%%  Course Name  : Modern Computing and Python Programming (26ESCC106)                           %%%%%
+%%%%%  Compiled by  : Mr. Manjunath Prasad H. R., Department of AI&ML                               %%%%%
+%%%%%  Reviewed and Approved by : Dr. Prashanth C. M. Principal, MITE,                              %%%%%
+%%%%%                             Dr. Terrence K. Johnson, Professor & Associate Dean Academics     %%%%%
+%%%%%                             Dr. Ravinarayana B., Professor and Head, Department of CS&E       %%%%%
+%%%%%                                                                                               %%%%%
+%%%%%  HOW THIS DOCUMENT DESIGNED                                                                   %%%%%
+%%%%%    main.tex        -- this file: settings are in preamble.tex, topics are pulled in below     %%%%%
+%%%%%    preamble.tex    -- packages, figure macros and the \topic command, shared by every file    %%%%%
+%%%%%    topics/*.tex    -- one file per topic; each is a subfile and also compiles on its own      %%%%%
+%%%%%                                                                                               %%%%%
+%%%%%  Compile main.tex (pdfLaTeX, twice) for the complete Module 1 material, or compile any        %%%%%
+%%%%%  single file in topics/ to get just that topic. To add a topic: create topics/<name>.tex      %%%%%
+%%%%%  from topics/edge-computing.tex and add one \subfile line below.                              %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,a4paper]{article}
+
+\input{preamble}
+\usepackage{subfiles}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\subfile{topics/cluster-and-grid-computing}
+
+\subfile{topics/edge-computing}
+
+\end{document}
